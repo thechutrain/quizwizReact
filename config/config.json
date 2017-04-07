@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "foo",
+    "password": "bar",
+    "database": "quizwiz_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "sqlite": {
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite"
+  },
+  "test": {
+    "username": "foo",
+    "password": "bar",
+    "database": "quizwiz_testing_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "travisTest": {
+    "username": "root",
+    "password": null,
+    "database": "quizwiz_travis_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
