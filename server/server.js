@@ -27,13 +27,18 @@ app.use(errorHandler)
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
+  app.use(express.static(path.join(__dirname, '/..', '/client/build')))
   app.get('/', (req, res) => {
     // res.send('hey there')
+    console.log('========================')
+    console.log(process.cwd())
+    console.log(__dirname)
+    console.log('========================')
     res.type('.html')
     res.sendFile(path.join(__dirname, '../client/build/index.html'))
   })
 }
+
 // Start server ---------------------------------- /
 if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'travisTest') {
   db.sequelize.sync().then(() => {
