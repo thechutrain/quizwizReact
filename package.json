@@ -6,6 +6,8 @@
   "scripts": {
     "preserver": "export NODE_ENV='development'; npm run migrate-dev",
     "server": "export NODE_ENV='development'; node server/server.js",
+    "preserver-production": "NODE_ENV='production' node_modules/.bin/sequelize db:migrate",
+    "server-production": "NODE_ENV='production' node server/server.js",
     "client": "node start-client.js",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "migrate": "node_modules/.bin/sequelize db:migrate",
