@@ -21,6 +21,7 @@
     "travis-test": "npm run migrate; find ./test -name '*.js' | node_modules/.bin/mocha --recursive"
   },
   "dependencies": {
+    "axios": "^0.16.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "morgan": "^1.8.1",
