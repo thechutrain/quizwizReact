@@ -15,13 +15,15 @@ $ npm start                               // starts webpack server for React fun
 ```
 
 ## Deploying on Heroku
+view the demo app: [here](https://quizwiz.herokuapp.com/)
 
 ```
 $ cd client 
 $ npm run build
 $ heroku login                   // login into your heroku account
 $ heroku create [you-app-name]   // creates your app name
-$ git push heroku master          // or if you want to push up a branch $git push heroku [branch-name]:master
+$ git push heroku master          
+// or if you want to push up a branch $git push heroku [branch-name]:master
 ```
 
 After you do the previous commands, go to heroku.com and add JAWS_DB as a free add on, and then do the following cmd.
