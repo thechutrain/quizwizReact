@@ -10,7 +10,7 @@ chai.use(dirtyChai)
 const server = require('../../server')
 
 // require the database models
-const models = require('../../models')
+const models = require('../../db/models')
 const query = require('../../controllers/apiQuery')
 
 const title =
