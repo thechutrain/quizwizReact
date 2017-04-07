@@ -2,6 +2,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
+const path = require('path')
 const errorHandler = require('./controllers/middleware/errorHandler')
 
 // Create express App ------------------------- /
@@ -11,6 +12,9 @@ const PORT = process.env.PORT || 3001
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
+  app.get('/', (req, res) => {
+    res.sendfile(path.join(__dirname, '/../client/build', '/index.html'))
+  })
 }
 
 // require models ------------------------- /
