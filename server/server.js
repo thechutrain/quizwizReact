@@ -29,7 +29,9 @@ app.use(errorHandler)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
   app.get('/', (req, res) => {
-    res.send('hey there')
+    // res.send('hey there')
+    res.type('.html')
+    res.sendFile('../client/build/index.html')
   })
 }
 // Start server ---------------------------------- /
