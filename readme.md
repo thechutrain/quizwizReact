@@ -14,6 +14,22 @@ $ cd client && npm install
 $ npm start                               // starts webpack server for React fun
 ```
 
+## Deploying on Heroku
+
+```
+$ cd client 
+$ npm run build
+$ heroku login                   // login into your heroku account
+$ heroku create [you-app-name]   // creates your app name
+$ git push heroku master          // or if you want to push up a branch $git push heroku [branch-name]:master
+```
+
+After you do the previous commands, go to heroku.com and add JAWS_DB as a free add on, and then do the following cmd.
+
+```
+$ heroku run sequelize db:migrate --app [your-app-name]  // runs migrations on your database
+```
+
 ## ERD
 
 ![erd](.notes/quizwizERD1.png)
