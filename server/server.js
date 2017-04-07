@@ -8,6 +8,11 @@ const errorHandler = require('./controllers/middleware/errorHandler')
 const app = express() // for testing purposes
 const PORT = process.env.PORT || 3001
 
+// Express only serves static assets in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
+}
+
 // require models ------------------------- /
 const db = require('./db/models')
 const apiRouter = require('./controllers/apiRouter')
