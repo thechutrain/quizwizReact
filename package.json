@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "6.8.x"
+  },
   "scripts": {
     "preserver": "export NODE_ENV='development'; npm run migrate-dev",
     "server": "export NODE_ENV='development'; node server/server.js",
+    "server-production": "NODE_ENV='production' node server/server.js",
     "client": "node start-client.js",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "migrate": "node_modules/.bin/sequelize db:migrate",
@@ -21,10 +26,12 @@
     "travis-test": "npm run migrate; find ./test -name '*.js' | node_modules/.bin/mocha --recursive"
   },
   "dependencies": {
+    "axios": "^0.16.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
+    "sequelize-cli": "^2.7.0",
     "sequelize": "^3.30.2"
   },
   "devDependencies": {
