@@ -1,17 +1,17 @@
-# QuizWiz API
-[![Build Status](https://travis-ci.org/thechutrain/quizwiz.svg?branch=master)](https://travis-ci.org/thechutrain/quizwiz)
+# QuizWiz React
+<!--[![Build Status](https://travis-ci.org/thechutrain/quizwiz.svg?branch=master)](https://travis-ci.org/thechutrain/quizwiz)-->
+> a React.js app built off a RESTful Express.js API
 
-> a RESTful Express.js API built with testing.
-
-- A refactored backend of a previous project made using `sequelize`. 
-- Built along with `mocha` and `chai` testing libraries. For less frustrations down the road ...
+- A small little fun project utilizing the React.js library for viewing data from a RESTful API
 
 
 ## Getting Started
 ```
-$ git clone git@github.com:thechutrain/quizwiz.git
-$ npm init 
-$ npm start
+$ git clone git@github.com:thechutrain/git@github.com:thechutrain/quizwizReact.git
+$ cd quizwizReact && npm install
+$ npm start                               // starts the api server
+$ cd client && npm install
+$ npm start                               // starts webpack server for React fun
 ```
 
 ## ERD
@@ -20,8 +20,6 @@ $ npm start
 > - rows highlighted in red represent primary or composite keys
 > - rows highlighted in yellow represent foreign keys
 
-## API docs
-to do ...
 
 ## Testing
 - Unit and intergration test of the API endpoints were written as the queries were made.
