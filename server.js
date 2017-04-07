@@ -6,7 +6,7 @@ const errorHandler = require('./controllers/middleware/errorHandler')
 
 // Create express App ------------------------- /
 const app = express() // for testing purposes
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 // require models ------------------------- /
 const db = require('./models')
