@@ -9,7 +9,7 @@ const app = express() // for testing purposes
 const PORT = process.env.PORT || 3001
 
 // require models ------------------------- /
-const db = require('./models')
+const db = require('./db/models')
 const apiRouter = require('./controllers/apiRouter')
 
 // Logger ------------------------- /
