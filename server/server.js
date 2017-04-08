@@ -9,7 +9,6 @@ const errorHandler = require('./controllers/middleware/errorHandler')
 const app = express() // for testing purposes
 const PORT = process.env.PORT || 3001
 
-
 // require models ------------------------- /
 const db = require('./db/models')
 const apiRouter = require('./controllers/apiRouter')
@@ -29,11 +28,6 @@ app.use(errorHandler)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/..', '/client/build')))
   app.get('/', (req, res) => {
-    // res.send('hey there')
-    console.log('========================')
-    console.log(process.cwd())
-    console.log(__dirname)
-    console.log('========================')
     res.type('.html')
     res.sendFile(path.join(__dirname, '../client/build/index.html'))
   })
