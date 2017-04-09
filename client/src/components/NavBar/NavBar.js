@@ -1,12 +1,12 @@
 import React from 'react'
-import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import './NavBar.css'
 
-const App = React.createClass({
+const NavBar = React.createClass({
   render () {
     return (
       <Router>
-        <div>
+        <div className="navbar-container">
         <h1>Welcome!!</h1>
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -21,6 +21,7 @@ const App = React.createClass({
   }
 })
 
+
 const Home = () => (
   <div>
     <p>Home</p>
@@ -29,8 +30,8 @@ const Home = () => (
 
 const About = () => (
   <div>
-    <p>About</p>
+    <p>About Me</p>
   </div>
 )
 
-export default App
+export default NavBar
