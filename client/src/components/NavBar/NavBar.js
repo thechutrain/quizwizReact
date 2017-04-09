@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Button, Nav, Navbar, NavItem } from 'react-bootstrap'
+import Home from '../Home/Home'
+import About from '../About/About'
 import './NavBar.css'
 
 const Navigation = React.createClass({
@@ -29,18 +31,5 @@ const Navigation = React.createClass({
     )
   }
 })
-
-
-const Home = () => (
-  <div>
-    <p>Home</p>
-  </div>
-)
-
-const About = () => (
-  <div>
-    <p>About Me</p>
-  </div>
-)
 
 export default Navigation
